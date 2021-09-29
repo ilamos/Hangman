@@ -230,9 +230,9 @@ class hangman_game():
         else:
             #Wrong guess
             self.wrong_guess(current_char)
+        self.clear_entry()
         self.check_victory()
         self.check_gameover()
-        self.clear_entry()
 
     def init_elements(self):
         self.hang_label = GUI.Label(textvariable=self.gamedata.hang_textvar)
