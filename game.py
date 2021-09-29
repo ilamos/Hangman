@@ -215,13 +215,10 @@ class hangman_game():
             print("Already guessed")
             self.clear_entry()
             return
-        guess_length = len(current_char)
         _wordChosen = self.gamedata.chosen_word
         _currentString = self.gamedata.main_textvar.get()
         print("Guessed: " + current_char)
         if current_char in _wordChosen.lower():
-            guess_count = 0
-            index_of = _wordChosen.find(current_char)
             for i in range(len(_wordChosen)):
                 if _wordChosen[i].lower() == current_char:
                     _currentString = self.replace_char(_currentString, _wordChosen[i], i)
